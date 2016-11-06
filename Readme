@@ -1,0 +1,25 @@
+Purpose of this project is to build index and retrieval engine on wikipedia documents.
+
+There will be 3 main stages
+
+1.Build index from wikidump
+
+input: wikidump folder
+output: index folder in following format
+One index file will be created for every 10 wiki documents. While building index stop words will be removed
+and words will be stemmed.
+All the words in index document are sorted by word and type.
+
+ex: index file1   manchi_1=id1  2, id2 3
+                  manju_2=id1 3, id2 1
+     index file2    manchi_1=id4 2, id5 2
+                    manjui_2=id4 1, id5 2
+From the example above there are 2 index files created sorted by word. 
+In index file1 manchi word present in title section in id1 and id2 pages 2,3 times respectively.
+manju word present in category section in id1 and id2 pages 3,1 times respectively.
+
+In index file2 manchi word present in title section in id4 and id5 pages 2,2 times respectively.
+manju word present in category section in id4 and id5 pagess 1,2 times respectively.
+
+2.Build second level index on index files <TODO>
+3.Build retrieval engine on wikidump <TODO>
